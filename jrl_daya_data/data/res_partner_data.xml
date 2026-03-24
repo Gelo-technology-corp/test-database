@@ -10,7 +10,6 @@
         <record id="partner_cdo_foodsphere" model="res.partner">
             <field name="name">CDO FoodSphere Inc.</field>
             <field name="is_company" eval="True"/>
-            <field name="company_type">company</field>
             <field name="street">CDO Building, Araneta Center</field>
             <field name="city">Quezon City</field>
             <field name="country_id" ref="base.ph"/>
@@ -28,7 +27,6 @@
         <record id="partner_alphamart" model="res.partner">
             <field name="name">Alphamart</field>
             <field name="is_company" eval="True"/>
-            <field name="company_type">company</field>
             <field name="city">Metro Manila</field>
             <field name="country_id" ref="base.ph"/>
             <field name="supplier_rank" eval="0"/>
@@ -39,7 +37,6 @@
         <record id="partner_asari_asari_store" model="res.partner">
             <field name="name">Asari Asari Store</field>
             <field name="is_company" eval="True"/>
-            <field name="company_type">company</field>
             <field name="city">Metro Manila</field>
             <field name="country_id" ref="base.ph"/>
             <field name="supplier_rank" eval="0"/>
@@ -50,7 +47,6 @@
         <record id="partner_easy_mart" model="res.partner">
             <field name="name">Easy Mart</field>
             <field name="is_company" eval="True"/>
-            <field name="company_type">company</field>
             <field name="city">Metro Manila</field>
             <field name="country_id" ref="base.ph"/>
             <field name="supplier_rank" eval="0"/>
@@ -61,7 +57,6 @@
         <record id="partner_tambayan_store" model="res.partner">
             <field name="name">Tambayan Store</field>
             <field name="is_company" eval="True"/>
-            <field name="company_type">company</field>
             <field name="city">Metro Manila</field>
             <field name="country_id" ref="base.ph"/>
             <field name="supplier_rank" eval="0"/>
@@ -76,7 +71,6 @@
         <record id="partner_maria_lea_endaya" model="res.partner">
             <field name="name">Maria Lea Endaya</field>
             <field name="is_company" eval="False"/>
-            <field name="company_type">person</field>
             <field name="function">Management</field>
             <field name="country_id" ref="base.ph"/>
         </record>

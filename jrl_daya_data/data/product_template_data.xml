@@ -16,7 +16,6 @@
             <field name="list_price">185.00</field>
             <field name="standard_price">120.00</field>
             <field name="uom_id" ref="uom.product_uom_unit"/>
-            <field name="uom_po_id" ref="uom.product_uom_unit"/>
             <field name="sale_ok" eval="True"/>
             <field name="purchase_ok" eval="True"/>
             <field name="tracking">lot</field>
@@ -38,7 +37,6 @@
             <field name="list_price">99.00</field>
             <field name="standard_price">65.00</field>
             <field name="uom_id" ref="uom.product_uom_unit"/>
-            <field name="uom_po_id" ref="uom.product_uom_unit"/>
             <field name="sale_ok" eval="True"/>
             <field name="purchase_ok" eval="True"/>
             <field name="tracking">lot</field>
@@ -59,7 +57,6 @@
             <field name="list_price">155.00</field>
             <field name="standard_price">100.00</field>
             <field name="uom_id" ref="uom.product_uom_unit"/>
-            <field name="uom_po_id" ref="uom.product_uom_unit"/>
             <field name="sale_ok" eval="True"/>
             <field name="purchase_ok" eval="True"/>
             <field name="tracking">lot</field>
@@ -80,7 +77,6 @@
             <field name="list_price">28.00</field>
             <field name="standard_price">18.00</field>
             <field name="uom_id" ref="uom.product_uom_unit"/>
-            <field name="uom_po_id" ref="uom.product_uom_unit"/>
             <field name="sale_ok" eval="True"/>
             <field name="purchase_ok" eval="True"/>
             <field name="tracking">lot</field>
@@ -101,7 +97,6 @@
             <field name="list_price">175.00</field>
             <field name="standard_price">115.00</field>
             <field name="uom_id" ref="uom.product_uom_unit"/>
-            <field name="uom_po_id" ref="uom.product_uom_unit"/>
             <field name="sale_ok" eval="True"/>
             <field name="purchase_ok" eval="True"/>
             <field name="tracking">lot</field>
@@ -122,7 +117,6 @@
             <field name="list_price">210.00</field>
             <field name="standard_price">140.00</field>
             <field name="uom_id" ref="uom.product_uom_unit"/>
-            <field name="uom_po_id" ref="uom.product_uom_unit"/>
             <field name="sale_ok" eval="True"/>
             <field name="purchase_ok" eval="True"/>
             <field name="tracking">lot</field>
@@ -143,7 +137,6 @@
             <field name="list_price">165.00</field>
             <field name="standard_price">108.00</field>
             <field name="uom_id" ref="uom.product_uom_unit"/>
-            <field name="uom_po_id" ref="uom.product_uom_unit"/>
             <field name="sale_ok" eval="True"/>
             <field name="purchase_ok" eval="True"/>
             <field name="tracking">lot</field>

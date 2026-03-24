@@ -29,6 +29,7 @@ Designed for the Philippine localization with PHP currency.
         'stock',
         'sale_management',
         'purchase',
+        'account',
         'hr',
         'product_expiry',
     ],

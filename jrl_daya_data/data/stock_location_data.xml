@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- ============================================================ -->
+        <!--           WAREHOUSE LOCATIONS - JRL DAYA                     -->
+        <!--                                                              -->
+        <!--  Hierarchy (under the default warehouse WH):                 -->
+        <!--    stock.warehouse0 (default warehouse)                      -->
+        <!--      └── WH (view)  [stock.stock_location_stock parent]      -->
+        <!--                                                              -->
+        <!--  We add sub-locations under the main stock location:         -->
+        <!--    JRL Daya Stock (internal - lot_stock_id of warehouse0)    -->
+        <!--      ├── Receiving Area (for incoming goods)                 -->
+        <!--      ├── Cold Storage (frozen items)                         -->
+        <!--      │   ├── Cold Storage - Zone A (fast-moving)             -->
+        <!--      │   └── Cold Storage - Zone B (slow-moving)             -->
+        <!--      ├── Dry Storage (canned goods / non-perishable)         -->
+        <!--      ├── Staging Area (orders being prepared)                -->
+        <!--      └── Shipping Area (outgoing goods)                      -->
+        <!-- ============================================================ -->
+
+        <!-- Receiving Area - where goods arrive from CDO FoodSphere -->
+        <record id="location_receiving_area" model="stock.location">
+            <field name="name">Receiving Area</field>
+            <field name="usage">internal</field>
+            <field name="location_id" ref="stock.stock_location_stock"/>
+            <field name="barcode">JRL-RCV</field>
+        </record>
+
+        <!-- Cold Storage - parent zone for frozen products -->
+        <record id="location_cold_storage" model="stock.location">
+            <field name="name">Cold Storage</field>
+            <field name="usage">internal</field>
+            <field name="location_id" ref="stock.stock_location_stock"/>
+            <field name="barcode">JRL-COLD</field>
+        </record>
+
+        <!-- Cold Storage Zone A - Fast-moving items (e.g., Cheese Dog) -->
+        <record id="location_cold_storage_zone_a" model="stock.location">
+            <field name="name">Zone A - Fast Moving</field>
+            <field name="usage">internal</field>
+            <field name="location_id" ref="location_cold_storage"/>
+            <field name="barcode">JRL-COLD-A</field>
+        </record>
+
+        <!-- Cold Storage Zone B - Slow-moving items -->
+        <record id="location_cold_storage_zone_b" model="stock.location">
+            <field name="name">Zone B - Slow Moving</field>
+            <field name="usage">internal</field>
+            <field name="location_id" ref="location_cold_storage"/>
+            <field name="barcode">JRL-COLD-B</field>
+        </record>
+
+        <!-- Dry Storage - canned goods and non-perishable -->
+        <record id="location_dry_storage" model="stock.location">
+            <field name="name">Dry Storage</field>
+            <field name="usage">internal</field>
+            <field name="location_id" ref="stock.stock_location_stock"/>
+            <field name="barcode">JRL-DRY</field>
+        </record>
+
+        <!-- Staging Area - orders being picked/prepared -->
+        <record id="location_staging_area" model="stock.location">
+            <field name="name">Staging Area</field>
+            <field name="usage">internal</field>
+            <field name="location_id" ref="stock.stock_location_stock"/>
+            <field name="barcode">JRL-STG</field>
+        </record>
+
+        <!-- Shipping Area - outgoing goods -->
+        <record id="location_shipping_area" model="stock.location">
+            <field name="name">Shipping Area</field>
+            <field name="usage">internal</field>
+            <field name="location_id" ref="stock.stock_location_stock"/>
+            <field name="barcode">JRL-SHP</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- ============================================================ -->
+        <!--                     PRICELISTS                               -->
+        <!--  - Standard SRP Pricelist (default retail prices)            -->
+        <!--  - Dealer Pricelist (dealer discount for stores)             -->
+        <!--  - Alphamart Bulk Pricelist (10% off on >=100 units)         -->
+        <!-- ============================================================ -->
+
+        <!-- Standard SRP Pricelist (Public / Retail) -->
+        <record id="pricelist_srp" model="product.pricelist">
+            <field name="name">CDO Standard SRP</field>
+            <field name="currency_id" ref="base.PHP"/>
+        </record>
+
+        <!-- Dealer Pricelist - for registered dealer stores -->
+        <record id="pricelist_dealer" model="product.pricelist">
+            <field name="name">JRL Daya Dealer Price</field>
+            <field name="currency_id" ref="base.PHP"/>
+        </record>
+
+        <!-- Dealer discount: 5% off SRP for all Frozen Processed Food -->
+        <record id="pricelist_item_dealer_frozen" model="product.pricelist.item">
+            <field name="pricelist_id" ref="pricelist_dealer"/>
+            <field name="applied_on">2_product_category</field>
+            <field name="categ_id" ref="product_category_frozen_processed"/>
+            <field name="compute_price">percentage</field>
+            <field name="percent_price">5</field>
+            <field name="base">list_price</field>
+            <field name="min_quantity">1</field>
+        </record>
+
+        <!-- Dealer discount: 3% off SRP for Canned Goods -->
+        <record id="pricelist_item_dealer_canned" model="product.pricelist.item">
+            <field name="pricelist_id" ref="pricelist_dealer"/>
+            <field name="applied_on">2_product_category</field>
+            <field name="categ_id" ref="product_category_canned_goods"/>
+            <field name="compute_price">percentage</field>
+            <field name="percent_price">3</field>
+            <field name="base">list_price</field>
+            <field name="min_quantity">1</field>
+        </record>
+
+        <!-- ============================================================ -->
+        <!--  Alphamart Bulk Discount Pricelist                           -->
+        <!--  From meeting: >=100 units triggers 10% discount             -->
+        <!-- ============================================================ -->
+
+        <record id="pricelist_alphamart_bulk" model="product.pricelist">
+            <field name="name">Alphamart Bulk Discount</field>
+            <field name="currency_id" ref="base.PHP"/>
+        </record>
+
+        <!-- 10% off Cheese Dog 1kg when ordering >=100 units -->
+        <record id="pricelist_item_alphamart_chzdog_1kg" model="product.pricelist.item">
+            <field name="pricelist_id" ref="pricelist_alphamart_bulk"/>
+            <field name="applied_on">1_product</field>
+            <field name="product_tmpl_id" ref="product_tmpl_cdo_cheese_dog_1kg"/>
+            <field name="compute_price">percentage</field>
+            <field name="percent_price">10</field>
+            <field name="base">list_price</field>
+            <field name="min_quantity">100</field>
+        </record>
+
+        <!-- 10% off Cheese Dog 500g when ordering >=100 units -->
+        <record id="pricelist_item_alphamart_chzdog_500g" model="product.pricelist.item">
+            <field name="pricelist_id" ref="pricelist_alphamart_bulk"/>
+            <field name="applied_on">1_product</field>
+            <field name="product_tmpl_id" ref="product_tmpl_cdo_cheese_dog_500g"/>
+            <field name="compute_price">percentage</field>
+            <field name="percent_price">10</field>
+            <field name="base">list_price</field>
+            <field name="min_quantity">100</field>
+        </record>
+
+        <!-- 10% off Regular Hotdog 1kg when ordering >=100 units -->
+        <record id="pricelist_item_alphamart_reghtd_1kg" model="product.pricelist.item">
+            <field name="pricelist_id" ref="pricelist_alphamart_bulk"/>
+            <field name="applied_on">1_product</field>
+            <field name="product_tmpl_id" ref="product_tmpl_cdo_regular_hotdog_1kg"/>
+            <field name="compute_price">percentage</field>
+            <field name="percent_price">10</field>
+            <field name="base">list_price</field>
+            <field name="min_quantity">100</field>
+        </record>
+
+        <!-- 10% off Tocino when ordering >=100 units -->
+        <record id="pricelist_item_alphamart_tocino" model="product.pricelist.item">
+            <field name="pricelist_id" ref="pricelist_alphamart_bulk"/>
+            <field name="applied_on">1_product</field>
+            <field name="product_tmpl_id" ref="product_tmpl_cdo_tocino_450g"/>
+            <field name="compute_price">percentage</field>
+            <field name="percent_price">10</field>
+            <field name="base">list_price</field>
+            <field name="min_quantity">100</field>
+        </record>
+
+        <!-- 10% off Ulam Burger when ordering >=100 units -->
+        <record id="pricelist_item_alphamart_ulam_burger" model="product.pricelist.item">
+            <field name="pricelist_id" ref="pricelist_alphamart_bulk"/>
+            <field name="applied_on">1_product</field>
+            <field name="product_tmpl_id" ref="product_tmpl_cdo_ulam_burger_1kg"/>
+            <field name="compute_price">percentage</field>
+            <field name="percent_price">10</field>
+            <field name="base">list_price</field>
+            <field name="min_quantity">100</field>
+        </record>
+
+        <!-- 10% off Longganisa when ordering >=100 units -->
+        <record id="pricelist_item_alphamart_longganisa" model="product.pricelist.item">
+            <field name="pricelist_id" ref="pricelist_alphamart_bulk"/>
+            <field name="applied_on">1_product</field>
+            <field name="product_tmpl_id" ref="product_tmpl_cdo_longganisa_450g"/>
+            <field name="compute_price">percentage</field>
+            <field name="percent_price">10</field>
+            <field name="base">list_price</field>
+            <field name="min_quantity">100</field>
+        </record>
+
+        <!-- 10% off Sardines when ordering >=100 units -->
+        <record id="pricelist_item_alphamart_sardines" model="product.pricelist.item">
+            <field name="pricelist_id" ref="pricelist_alphamart_bulk"/>
+            <field name="applied_on">1_product</field>
+            <field name="product_tmpl_id" ref="product_tmpl_cdo_sardines_155g"/>
+            <field name="compute_price">percentage</field>
+            <field name="percent_price">10</field>
+            <field name="base">list_price</field>
+            <field name="min_quantity">100</field>
+        </record>
+
+        <!-- ============================================================ -->
+        <!--  Assign pricelists to customers                              -->
+        <!-- ============================================================ -->
+
+        <!-- Alphamart uses the bulk discount pricelist -->
+        <record id="partner_alphamart" model="res.partner">
+            <field name="property_product_pricelist" ref="pricelist_alphamart_bulk"/>
+        </record>
+
+        <!-- Other stores use dealer pricelist -->
+        <record id="partner_asari_asari_store" model="res.partner">
+            <field name="property_product_pricelist" ref="pricelist_dealer"/>
+        </record>
+
+        <record id="partner_easy_mart" model="res.partner">
+            <field name="property_product_pricelist" ref="pricelist_dealer"/>
+        </record>
+
+        <record id="partner_tambayan_store" model="res.partner">
+            <field name="property_product_pricelist" ref="pricelist_dealer"/>
+        </record>
+
+    </data>
+</odoo>

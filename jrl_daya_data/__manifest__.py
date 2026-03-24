@@ -34,6 +34,7 @@ Designed for the Philippine localization with PHP currency.
         'product_expiry',
     ],
     'data': [
+        'data/res_currency_data.xml',
         'data/res_partner_data.xml',
         'data/hr_department_data.xml',
         'data/product_category_data.xml',

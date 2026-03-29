@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- ============================================================ -->
+        <!--          SUPPLIER INFO (Vendor Pricelists per Product)       -->
+        <!--  Links CDO FoodSphere as the supplier for all products       -->
+        <!-- ============================================================ -->
+
+        <record id="supplierinfo_cdo_cheese_dog_1kg" model="product.supplierinfo">
+            <field name="partner_id" ref="partner_cdo_foodsphere"/>
+            <field name="product_tmpl_id" ref="product_tmpl_cdo_cheese_dog_1kg"/>
+            <field name="product_name">CDO Cheese Dog 1kg</field>
+            <field name="product_code">CDO-CHD-1K</field>
+            <field name="min_qty">1</field>
+            <field name="price">120.00</field>
+            <field name="delay" eval="3"/>
+        </record>
+
+        <record id="supplierinfo_cdo_cheese_dog_500g" model="product.supplierinfo">
+            <field name="partner_id" ref="partner_cdo_foodsphere"/>
+            <field name="product_tmpl_id" ref="product_tmpl_cdo_cheese_dog_500g"/>
+            <field name="product_name">CDO Cheese Dog 500g</field>
+            <field name="product_code">CDO-CHD-500</field>
+            <field name="min_qty">1</field>
+            <field name="price">65.00</field>
+            <field name="delay" eval="3"/>
+        </record>
+
+        <record id="supplierinfo_cdo_regular_hotdog_1kg" model="product.supplierinfo">
+            <field name="partner_id" ref="partner_cdo_foodsphere"/>
+            <field name="product_tmpl_id" ref="product_tmpl_cdo_regular_hotdog_1kg"/>
+            <field name="product_name">CDO Regular Hotdog 1kg</field>
+            <field name="product_code">CDO-RHD-1K</field>
+            <field name="min_qty">1</field>
+            <field name="price">100.00</field>
+            <field name="delay" eval="3"/>
+        </record>
+
+        <record id="supplierinfo_cdo_sardines_155g" model="product.supplierinfo">
+            <field name="partner_id" ref="partner_cdo_foodsphere"/>
+            <field name="product_tmpl_id" ref="product_tmpl_cdo_sardines_155g"/>
+            <field name="product_name">CDO Young Town Sardines 155g</field>
+            <field name="product_code">CDO-YTS-155</field>
+            <field name="min_qty">1</field>
+            <field name="price">18.00</field>
+            <field name="delay" eval="5"/>
+        </record>
+
+        <record id="supplierinfo_cdo_tocino_450g" model="product.supplierinfo">
+            <field name="partner_id" ref="partner_cdo_foodsphere"/>
+            <field name="product_tmpl_id" ref="product_tmpl_cdo_tocino_450g"/>
+            <field name="product_name">CDO Funtastyk Tocino 450g</field>
+            <field name="product_code">CDO-FTK-450</field>
+            <field name="min_qty">1</field>
+            <field name="price">115.00</field>
+            <field name="delay" eval="3"/>
+        </record>
+
+        <record id="supplierinfo_cdo_ulam_burger_1kg" model="product.supplierinfo">
+            <field name="partner_id" ref="partner_cdo_foodsphere"/>
+            <field name="product_tmpl_id" ref="product_tmpl_cdo_ulam_burger_1kg"/>
+            <field name="product_name">CDO Ulam Burger 1kg</field>
+            <field name="product_code">CDO-ULB-1K</field>
+            <field name="min_qty">1</field>
+            <field name="price">140.00</field>
+            <field name="delay" eval="3"/>
+        </record>
+
+        <record id="supplierinfo_cdo_longganisa_450g" model="product.supplierinfo">
+            <field name="partner_id" ref="partner_cdo_foodsphere"/>
+            <field name="product_tmpl_id" ref="product_tmpl_cdo_longganisa_450g"/>
+            <field name="product_name">CDO Bibbo Longganisa 450g</field>
+            <field name="product_code">CDO-BBL-450</field>
+            <field name="min_qty">1</field>
+            <field name="price">108.00</field>
+            <field name="delay" eval="3"/>
+        </record>
+
+    </data>
+</odoo>

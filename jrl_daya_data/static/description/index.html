@@ -1,0 +1,69 @@
+<html>
+<head>
+<style>
+    body { font-family: Arial, sans-serif; color: #333; }
+    h2 { color: #875A7B; }
+    table { border-collapse: collapse; width: 100%; margin: 10px 0; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    th { background-color: #875A7B; color: white; }
+    ul { margin: 5px 0; }
+</style>
+</head>
+<body>
+<h2>JRL Daya - Master Data Module</h2>
+<p>Pre-loads master data for JRL &amp; Daya business operations, based on the Odoo ERP discovery session conducted with AvinivA Technology.</p>
+
+<h3>Contacts</h3>
+<ul>
+    <li><strong>Supplier:</strong> CDO FoodSphere Inc.</li>
+    <li><strong>Customers:</strong> Alphamart, Asari Asari Store, Easy Mart, Tambayan Store</li>
+    <li><strong>Key Contact:</strong> Maria Lea Endaya</li>
+</ul>
+
+<h3>Departments</h3>
+<ul>
+    <li>Management
+        <ul>
+            <li>Operations Support</li>
+            <li>Accounting</li>
+            <li>Warehouse</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>Products (CDO FoodSphere line)</h3>
+<table>
+    <tr><th>Product</th><th>SKU</th><th>SRP (&#8369;)</th><th>Cost (&#8369;)</th></tr>
+    <tr><td>CDO Cheese Dog 1kg</td><td>CDO-CHZDOG-1KG</td><td>185.00</td><td>120.00</td></tr>
+    <tr><td>CDO Cheese Dog 500g</td><td>CDO-CHZDOG-500G</td><td>99.00</td><td>65.00</td></tr>
+    <tr><td>CDO Regular Hotdog 1kg</td><td>CDO-REGHTD-1KG</td><td>155.00</td><td>100.00</td></tr>
+    <tr><td>CDO Young Town Sardines 155g</td><td>CDO-SARD-155G</td><td>28.00</td><td>18.00</td></tr>
+    <tr><td>CDO Funtastyk Tocino 450g</td><td>CDO-TOCNO-450G</td><td>175.00</td><td>115.00</td></tr>
+    <tr><td>CDO Ulam Burger 1kg</td><td>CDO-ULBRG-1KG</td><td>210.00</td><td>140.00</td></tr>
+    <tr><td>CDO Bibbo Longganisa 450g</td><td>CDO-LGNSA-450G</td><td>165.00</td><td>108.00</td></tr>
+</table>
+<p>All products are lot-tracked, expiration-enabled, and linked to CDO FoodSphere as supplier.</p>
+
+<h3>Warehouse Locations (Hierarchical)</h3>
+<pre>
+WH / Stock (default)
+&#9500;&#9472;&#9472; Receiving Area
+&#9500;&#9472;&#9472; Cold Storage
+&#9474;   &#9500;&#9472;&#9472; Zone A - Fast Moving
+&#9474;   &#9492;&#9472;&#9472; Zone B - Slow Moving
+&#9500;&#9472;&#9472; Dry Storage
+&#9500;&#9472;&#9472; Staging Area
+&#9492;&#9472;&#9472; Shipping Area
+</pre>
+
+<h3>Pricelists</h3>
+<ul>
+    <li><strong>CDO Standard SRP</strong> - Base retail pricing (PHP)</li>
+    <li><strong>JRL Daya Dealer Price</strong> - Dealer discounts (5% frozen, 3% canned)</li>
+    <li><strong>Alphamart Bulk Discount</strong> - 10% off on orders &ge;100 units</li>
+</ul>
+
+<h3>Compatibility</h3>
+<p>Odoo 19.0</p>
+</body>
+</html>

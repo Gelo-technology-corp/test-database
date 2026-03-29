@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- ============================================================ -->
+        <!--                   PRODUCT CATEGORIES                         -->
+        <!-- ============================================================ -->
+
+        <!-- Food &amp; Beverages (top-level under All) -->
+        <record id="product_category_food_beverages" model="product.category">
+            <field name="name">Food &amp; Beverages</field>
+            <field name="parent_id" ref="product.product_category_goods"/>
+        </record>
+
+        <!-- Frozen Processed Food (under Food &amp; Beverages) -->
+        <record id="product_category_frozen_processed" model="product.category">
+            <field name="name">Frozen Processed Food</field>
+            <field name="parent_id" ref="product_category_food_beverages"/>
+        </record>
+
+        <!-- Frozen Meat Products -->
+        <record id="product_category_frozen_meat" model="product.category">
+            <field name="name">Frozen Meat Products</field>
+            <field name="parent_id" ref="product_category_frozen_processed"/>
+        </record>
+
+        <!-- Canned Goods -->
+        <record id="product_category_canned_goods" model="product.category">
+            <field name="name">Canned Goods</field>
+            <field name="parent_id" ref="product_category_food_beverages"/>
+        </record>
+
+    </data>
+</odoo>

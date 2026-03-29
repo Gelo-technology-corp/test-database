@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- ============================================================ -->
+        <!--               CDO FOODSPHERE PRODUCTS                        -->
+        <!--  Products mentioned: Cheese Dog (fast-moving SKU)            -->
+        <!--  All products: perishable, lot-tracked, fixed SRP pricing    -->
+        <!-- ============================================================ -->
+
+        <!-- CDO Cheese Dog - 1kg Pack (fast-moving SKU from demo) -->
+        <record id="product_tmpl_cdo_cheese_dog_1kg" model="product.template">
+            <field name="name">CDO Cheese Dog 1kg</field>
+            <field name="type">consu</field>
+            <field name="categ_id" ref="product_category_frozen_meat"/>
+            <field name="list_price">185.00</field>
+            <field name="standard_price">120.00</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="sale_ok" eval="True"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="tracking">lot</field>
+            <field name="use_expiration_date" eval="True"/>
+            <field name="expiration_time" eval="180"/>
+            <field name="removal_time" eval="30"/>
+            <field name="use_time" eval="15"/>
+            <field name="alert_time" eval="10"/>
+            <field name="default_code">CDO-CHZDOG-1KG</field>
+            <field name="description_sale">CDO Cheese Dog - Premium quality cheese-filled hotdog. 1kg pack.</field>
+            <field name="description_purchase">CDO Cheese Dog 1kg pack - Frozen processed meat product.</field>
+        </record>
+
+        <!-- CDO Cheese Dog - 500g Pack -->
+        <record id="product_tmpl_cdo_cheese_dog_500g" model="product.template">
+            <field name="name">CDO Cheese Dog 500g</field>
+            <field name="type">consu</field>
+            <field name="categ_id" ref="product_category_frozen_meat"/>
+            <field name="list_price">99.00</field>
+            <field name="standard_price">65.00</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="sale_ok" eval="True"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="tracking">lot</field>
+            <field name="use_expiration_date" eval="True"/>
+            <field name="expiration_time" eval="180"/>
+            <field name="removal_time" eval="30"/>
+            <field name="use_time" eval="15"/>
+            <field name="alert_time" eval="10"/>
+            <field name="default_code">CDO-CHZDOG-500G</field>
+            <field name="description_sale">CDO Cheese Dog - Premium quality cheese-filled hotdog. 500g pack.</field>
+        </record>
+
+        <!-- CDO Regular Hotdog - 1kg -->
+        <record id="product_tmpl_cdo_regular_hotdog_1kg" model="product.template">
+            <field name="name">CDO Regular Hotdog 1kg</field>
+            <field name="type">consu</field>
+            <field name="categ_id" ref="product_category_frozen_meat"/>
+            <field name="list_price">155.00</field>
+            <field name="standard_price">100.00</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="sale_ok" eval="True"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="tracking">lot</field>
+            <field name="use_expiration_date" eval="True"/>
+            <field name="expiration_time" eval="180"/>
+            <field name="removal_time" eval="30"/>
+            <field name="use_time" eval="15"/>
+            <field name="alert_time" eval="10"/>
+            <field name="default_code">CDO-REGHTD-1KG</field>
+            <field name="description_sale">CDO Regular Hotdog - Classic recipe. 1kg pack.</field>
+        </record>
+
+        <!-- CDO Young Town Sardines - 155g Can -->
+        <record id="product_tmpl_cdo_sardines_155g" model="product.template">
+            <field name="name">CDO Young Town Sardines 155g</field>
+            <field name="type">consu</field>
+            <field name="categ_id" ref="product_category_canned_goods"/>
+            <field name="list_price">28.00</field>
+            <field name="standard_price">18.00</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="sale_ok" eval="True"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="tracking">lot</field>
+            <field name="use_expiration_date" eval="True"/>
+            <field name="expiration_time" eval="730"/>
+            <field name="removal_time" eval="90"/>
+            <field name="use_time" eval="60"/>
+            <field name="alert_time" eval="30"/>
+            <field name="default_code">CDO-SARD-155G</field>
+            <field name="description_sale">CDO Young Town Sardines in Tomato Sauce. 155g can.</field>
+        </record>
+
+        <!-- CDO Funtastyk Tocino - 450g -->
+        <record id="product_tmpl_cdo_tocino_450g" model="product.template">
+            <field name="name">CDO Funtastyk Tocino 450g</field>
+            <field name="type">consu</field>
+            <field name="categ_id" ref="product_category_frozen_meat"/>
+            <field name="list_price">175.00</field>
+            <field name="standard_price">115.00</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="sale_ok" eval="True"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="tracking">lot</field>
+            <field name="use_expiration_date" eval="True"/>
+            <field name="expiration_time" eval="180"/>
+            <field name="removal_time" eval="30"/>
+            <field name="use_time" eval="15"/>
+            <field name="alert_time" eval="10"/>
+            <field name="default_code">CDO-TOCNO-450G</field>
+            <field name="description_sale">CDO Funtastyk Tocino - Sweet cured pork. 450g pack.</field>
+        </record>
+
+        <!-- CDO Ulam Burger - 1kg -->
+        <record id="product_tmpl_cdo_ulam_burger_1kg" model="product.template">
+            <field name="name">CDO Ulam Burger 1kg</field>
+            <field name="type">consu</field>
+            <field name="categ_id" ref="product_category_frozen_meat"/>
+            <field name="list_price">210.00</field>
+            <field name="standard_price">140.00</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="sale_ok" eval="True"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="tracking">lot</field>
+            <field name="use_expiration_date" eval="True"/>
+            <field name="expiration_time" eval="180"/>
+            <field name="removal_time" eval="30"/>
+            <field name="use_time" eval="15"/>
+            <field name="alert_time" eval="10"/>
+            <field name="default_code">CDO-ULBRG-1KG</field>
+            <field name="description_sale">CDO Ulam Burger - Ready-to-cook burger patties. 1kg pack.</field>
+        </record>
+
+        <!-- CDO Bibbo Longganisa - 450g -->
+        <record id="product_tmpl_cdo_longganisa_450g" model="product.template">
+            <field name="name">CDO Bibbo Longganisa 450g</field>
+            <field name="type">consu</field>
+            <field name="categ_id" ref="product_category_frozen_meat"/>
+            <field name="list_price">165.00</field>
+            <field name="standard_price">108.00</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="sale_ok" eval="True"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="tracking">lot</field>
+            <field name="use_expiration_date" eval="True"/>
+            <field name="expiration_time" eval="180"/>
+            <field name="removal_time" eval="30"/>
+            <field name="use_time" eval="15"/>
+            <field name="alert_time" eval="10"/>
+            <field name="default_code">CDO-LGNSA-450G</field>
+            <field name="description_sale">CDO Bibbo Longganisa - Filipino-style sausage. 450g pack.</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- ============================================================ -->
+        <!--  Activate PHP (Philippine Peso) and set as company currency  -->
+        <!--  By default base.PHP is inactive in Odoo                     -->
+        <!-- ============================================================ -->
+
+        <!-- Activate Philippine Peso -->
+        <record id="base.PHP" model="res.currency">
+            <field name="active" eval="True"/>
+        </record>
+
+        <!-- Set main company currency to PHP -->
+        <record id="base.main_company" model="res.company">
+            <field name="currency_id" ref="base.PHP"/>
+            <field name="country_id" ref="base.ph"/>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- ============================================================ -->
+        <!--                      DEPARTMENTS                             -->
+        <!-- ============================================================ -->
+
+        <!-- Management (top-level) -->
+        <record id="department_management" model="hr.department">
+            <field name="name">Management</field>
+        </record>
+
+        <!-- Operations Support (CSN coding and ordering) -->
+        <record id="department_operations_support" model="hr.department">
+            <field name="name">Operations Support</field>
+            <field name="parent_id" ref="department_management"/>
+        </record>
+
+        <!-- Accounting -->
+        <record id="department_accounting" model="hr.department">
+            <field name="name">Accounting</field>
+            <field name="parent_id" ref="department_management"/>
+        </record>
+
+        <!-- Warehouse -->
+        <record id="department_warehouse" model="hr.department">
+            <field name="name">Warehouse</field>
+            <field name="parent_id" ref="department_management"/>
+        </record>
+
+    </data>
+</odoo>

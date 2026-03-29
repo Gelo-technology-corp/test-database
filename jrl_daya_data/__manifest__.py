@@ -1,5 +1,5 @@
 {
-    'name': 'JRL Daya - Master Data',
+    'name': 'Aviniva Client Demon Data',
     'version': '19.0.1.0.0',
     'category': 'Technical',
     'summary': 'Pre-loaded master data for JRL & Daya operations: contacts, products, locations, pricelists',
